@@ -8,7 +8,7 @@ export const NavBar = () => {
     <nav className='navbar navbar-expand-lg navbar-light bg-light'>
       <div className='container-fluid'>
         <a className='navbar-brand' href='#main'>
-          <FormattedMessage id='test' />
+          <FormattedMessage id='title' />
         </a>
         <button
           className='navbar-toggler'
@@ -26,6 +26,11 @@ export const NavBar = () => {
             <li className='nav-item active'>
               <Link className='nav-link' to='/'>
                 <FormattedMessage id='pokemons' />
+              </Link>
+            </li>
+            <li className='nav-item active'>
+              <Link className='nav-link' to='/report'>
+                <FormattedMessage id='report' />
               </Link>
             </li>
           </ul>

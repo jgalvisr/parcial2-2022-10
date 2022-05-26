@@ -6,9 +6,12 @@ import messages from './i18n/messages';
 import { NavBar } from './shared/components/NavBar';
 import { PokemonList } from './pages/pokemon-list/PokemonList';
 import './App.scss';
+import { PokemonReport } from './pages/pokemon-list/PokemonReport';
 
 function App() {
-  const [language, setLanguage] = useState(LOCALES.SPANISH);
+  var lang = navigator.language === "es" ? LOCALES.SPANISH : navigator.language === "en-US" ? LOCALES.ENGLISH : LOCALES.ENGLISH;
+
+  const [language, setLanguage] = useState(lang);
   return (
     <>
       <IntlProvider locale={language} messages={messages[language]}>
@@ -16,6 +19,7 @@ function App() {
           <NavBar></NavBar>
           <Routes>
             <Route exact path='/' element={<PokemonList></PokemonList>} />
+            <Route exact path='/report' element={<PokemonReport></PokemonReport>} />
             <Route
               path='*'
               element={

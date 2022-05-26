@@ -2,9 +2,18 @@ import { LOCALES } from '../locales';
 
 const english = {
   [LOCALES.ENGLISH]: {
-    hello: 'Hello',
+    title: 'Pokemon wiki',
     pokemons: 'Pokemons',
-    test: 'Web Test',
+    report: 'Report',
+    listHeader: 'Most wanted Pokemons',
+    image: 'Image',
+    name: 'Name',
+    description: 'Description',
+    height: 'Height',
+    weight: 'Weight',
+    type: 'Type',
+    reportHeader: 'Height report',
+    loading: "Loading..."
   },
 };
 
