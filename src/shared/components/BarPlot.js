@@ -17,7 +17,7 @@ export const BarPlot = ({data, width = 600, height = 600}) => {
     let g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
     const y = d3.scaleLinear()
-      .domain([0, 100])
+      .domain([0, 1150])
       .range([iheight, 0])
 
     const x = d3.scaleBand()
@@ -32,7 +32,7 @@ export const BarPlot = ({data, width = 600, height = 600}) => {
       .style("fill", "steelblue")
       .attr("x", d => x(d.name))
       .attr("y", d => y(d.height))
-      .attr("height", d => iheight - y(d.count))
+      .attr("height", d => iheight - y(d.height))
       .attr("width", x.bandwidth())
 
     g.append("g")

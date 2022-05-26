@@ -21,6 +21,7 @@ export const PokemonList = () => {
       }
     }
     else {
+      // En español no me funciona el API :(
       console.log(API[navigator.language]);
       fetch(API[navigator.language])
       .then(resp => resp.json())

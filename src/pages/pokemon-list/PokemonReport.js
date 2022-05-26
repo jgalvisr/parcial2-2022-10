@@ -33,7 +33,9 @@ export const PokemonReport = () => {
   return (
     <>
       <h1><FormattedMessage id="reportHeader"/></h1>
-      <BarPlot data={pokemons}></BarPlot>
+      {pokemons ? 
+        <BarPlot data={pokemons}></BarPlot> : <></>
+      }
     </>
   )
 }
